@@ -7,20 +7,30 @@
 * [Postman](https://www.getpostman.com/)
 
 ## Install Extension VS Code
-* Install Extension Setting Sync
-* Input Gist ID is b56220dd30eb4abd1c8ccbc392a82a5a
-* Input Access Token is fddd371a05bcfa09bad0c2c9a93200bfb19b8a4d
-* Shift + Alt + D
+1. Install Extension Setting Sync
+2. Input Gist ID is b56220dd30eb4abd1c8ccbc392a82a5a
+3. Input Access Token is fddd371a05bcfa09bad0c2c9a93200bfb19b8a4d
+4. Shift + Alt + D
 
-## Pull ImageDocker
+## Pull Image Docker
+```
 docker pull mcr.microsoft.com/dotnet/core/sdk:3.0
 docker pull mcr.microsoft.com/dotnet/core/aspnet:3.0
 docker pull node:12.8-alpine
 docker pull nginx:stable-alpine
+```
 
 ## Docker
-* but can't run on VMware because docker use Hyper-V fix use docker on server 10.100.100.82
+Can't run container on VMware Workstation because docker use Hyper-V but it's fix enable Intel VT-x/EPT or AMD-V/RVI in Virtual Machine Setting
+[Linux]
+```
 docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Tel1234!' -p 1112:1433 -d mcr.microsoft.com/mssql/server:2017-CU14-ubuntu
+```
+
+[Windows]
+```
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Tel1234!" -p 1112:1433 -d mcr.microsoft.com/mssql/server:2017-CU14-ubuntu
+```
 
 ## Install Dotnet Tool Entity Framework
 - dotnet tool install --global dotnet-ef --version 3.0.0
@@ -43,7 +53,10 @@ dotnet new webapi
 - [NUGET Package](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/)
 
 ## Entity Framework
-dotnet ef dbcontext scaffold "Server=localhost,1112;user id=sa; password=Tel1234!; Database=CMPOS;" Microsoft.EntityFrameworkCore.SqlServer -o Models -t products -t users -c DatabaseContext --context-dir Database
+dotnet ef dbcontext scaffold -f "Server=localhost,1112;user id=sa; password=Tel1234!; Database=CMPOS;" Microsoft.EntityFrameworkCore.SqlServer -o Models -t products -t users -c DatabaseContext --context-dir Database
+
+
+dotnet ef dbcontext scaffold -f "Server=10.100.100.82,1112;user id=sa; password=Tel1234!; Database=CMPOS;" Microsoft.EntityFrameworkCore.SqlServer -o Models -t products -t users -c DatabaseContext --context-dir Database
 
 ## Certificate
 - dotnet dev-cert https --trust

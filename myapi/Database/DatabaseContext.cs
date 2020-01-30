@@ -1,7 +1,6 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using myapi.Models;
 
 namespace myapi.Database
 {
@@ -16,19 +15,17 @@ namespace myapi.Database
         {
         }
 
-        // dbset<name class in models fodler> follow name table
-
         public virtual DbSet<Products> Products { get; set; }
         public virtual DbSet<Users> Users { get; set; }
 
-//         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-//         {
-//             if (!optionsBuilder.IsConfigured)
-//             {
-// #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-//                 optionsBuilder.UseSqlServer("Server=localhost,1112;user id=sa; password=Tel1234!; Database=CMPOS;");
-//             }
-//         }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
+                optionsBuilder.UseSqlServer("Server=10.100.100.82,1112;user id=sa; password=Tel1234!; Database=CMPOS;");
+            }
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

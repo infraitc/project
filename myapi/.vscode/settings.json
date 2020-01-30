@@ -14,5 +14,18 @@
         "statusBarItem.hoverBackground": "#f7df1e",
         "statusBar.foreground": "#15202b"
     },
-    "peacock.color": "#f9e64f"
+    "peacock.color": "#f9e64f",
+    "sqltools.connections": [
+        {
+            "database": "cmpos",
+            "dialect": "MSSQL",
+            "isActive": false,
+            "isConnected": false,
+            "name": "cmpos@10.100.100.82",
+            "password": "Tel1234!",
+            "port": 1112,
+            "server": "10.100.100.82",
+            "username": "sa"
+        }
+    ]
 }
