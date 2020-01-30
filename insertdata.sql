@@ -1,6 +1,3 @@
-
-CREATE DATABASE cmpos
-
 USE [cmpos]
 GO
 /****** Object:  Table [dbo].[Products]    Script Date: 10/1/2019 5:28:22 PM ******/
