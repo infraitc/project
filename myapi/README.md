@@ -18,6 +18,9 @@ docker pull mcr.microsoft.com/dotnet/core/aspnet:3.0
 docker pull node:12.8-alpine
 docker pull nginx:stable-alpine
 
+## Docker
+docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Tel1234!' -p 1112:1433 -d mcr.microsoft.com/mssql/server:2017-CU14-ubuntu
+
 ## Install Dotnet Tool Entity Framework
 - dotnet tool install --global dotnet-ef --version 3.0.0
 
