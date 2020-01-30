@@ -24,6 +24,11 @@ docker pull nginx:stable-alpine
 ## Documentation
 * [.NET Core Guide](https://docs.microsoft.com/en-us/dotnet/core/)
 
+## Get Started New Web API
+```
+dotnet new webapi
+```
+
 ## Install NUGET Package in myapi.csproj
 - <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.0.1" />
 - <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.0.1">
