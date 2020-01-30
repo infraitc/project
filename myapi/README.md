@@ -19,6 +19,7 @@ docker pull node:12.8-alpine
 docker pull nginx:stable-alpine
 
 ## Docker
+* but can't run on VMware because docker use Hyper-V fix use docker on server 10.100.100.82
 docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Tel1234!' -p 1112:1433 -d mcr.microsoft.com/mssql/server:2017-CU14-ubuntu
 
 ## Install Dotnet Tool Entity Framework
