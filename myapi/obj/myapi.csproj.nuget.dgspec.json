@@ -1,30 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Work\\Project\\ASP.NET\\project\\myapi\\myapi.csproj": {}
+    "F:\\project\\myapi\\myapi.csproj": {}
   },
   "projects": {
-    "D:\\Work\\Project\\ASP.NET\\project\\myapi\\myapi.csproj": {
+    "F:\\project\\myapi\\myapi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Work\\Project\\ASP.NET\\project\\myapi\\myapi.csproj",
+        "projectUniqueName": "F:\\project\\myapi\\myapi.csproj",
         "projectName": "myapi",
-        "projectPath": "D:\\Work\\Project\\ASP.NET\\project\\myapi\\myapi.csproj",
-        "packagesPath": "C:\\Users\\natthasath.sak\\.nuget\\packages\\",
-        "outputPath": "D:\\Work\\Project\\ASP.NET\\project\\myapi\\obj\\",
+        "projectPath": "F:\\project\\myapi\\myapi.csproj",
+        "packagesPath": "C:\\Users\\Pavilion15\\.nuget\\packages\\",
+        "outputPath": "F:\\project\\myapi\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\natthasath.sak\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Pavilion15\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
