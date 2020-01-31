@@ -27,5 +27,5 @@ services:
       SA_PASSWORD: "Tel1234!"
       ACCEPT_EULA: "Y"
     ports:
-      - "1433:1433"
+      - "1112:1433"
     network_mode: bridge
