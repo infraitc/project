@@ -21,17 +21,17 @@ dotnet tool install --global dotnet-ef --version 3.0.0
 ```
 
 ## Git Clone Project
-[FirstTime]
+* FirstTime
 ```
 git clone https://github.com/infraitc/project
 ```
 
-[Update]
+* Update
 ```
 git pull
 ```
 
-[Fix]
+* Fix
 ```
 git reset --hard
 ```
@@ -46,13 +46,13 @@ docker pull nginx:stable-alpine
 
 ## Run Container Docker
 Can't run container on VMware Workstation because docker use Hyper-V but it's fix enable Intel VT-x/EPT or AMD-V/RVI in Virtual Machine Setting
-[Linux]
+* Linux
 ```
 docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Tel1234!' -p 1112:1433 -d mcr.microsoft.com/mssql/server:2017-CU14-ubuntu
 docker exec -it fff1913dabfc /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P 'Tel1234!'
 ```
 
-[Windows]
+* Windows
 ```
 docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Tel1234!" -p 1112:1433 -d mcr.microsoft.com/mssql/server:2017-CU14-ubuntu
 docker exec -it fff1913dabfc /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P "Tel1234!"
@@ -95,9 +95,24 @@ dotnet dev-cert https --trust
 * [Auth0](https://auth0.com/authenticate/aspnet-core/active-directory/)
 
 ## Create Model Entity Framework
-[DatabaseFirst]
+* DatabaseFirst
 ```
 dotnet ef dbcontext scaffold "Server=localhost,1112;user id=sa; password=Tel1234!; Database=CMPOS;" Microsoft.EntityFrameworkCore.SqlServer -o Models -t products -t users -c DatabaseContext --context-dir Database
+```
+
+* CodeFirst
+```
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+dotnet ef migrations add AddProductReviews
+dotnet ef migrations remove
+dotnet ef database update LastGoodMigration
+dotnet ef migrations list
+dotnet ef migrations script
+dotnet ef dbcontext info
+dotnet ef dbcontext scaffold
+dotnet ef database drop
+dotnet ef database update
 ```
 
 ## JGenerate Token JWT on WSL
